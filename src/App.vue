@@ -12,6 +12,6 @@ export default {
 <style scoped>
 * {
   min-height: 100vh;
-  background-color: darkslategrey;
+ 
 }
 </style>
