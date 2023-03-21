@@ -1,0 +1,68 @@
+svg path {
+    transition: .4s;
+    fill:  rgb(41, 76, 255);    
+}
+
+.external-link svg path {
+    stroke: rgb(41, 76, 255); 
+    fill: transparent;
+}
+
+.magic.dark {
+    transition: .4s;
+    background-color: #121c33;
+}
+.magic.dark  .input-wrapper, 
+.magic.dark  input {
+    transition: .4s;
+    background-color: transparent;
+}
+.magic.dark .myborder{
+    transition: .4s;
+    border-color: rgb(252, 252, 252);
+}
+.magic.dark  .input-wrapper, 
+.magic.dark  input {
+    transition: .4s;
+    background-color: #1d2c4f;
+    color: rgb(175, 187, 202);
+}
+.magic.dark p,
+.magic.dark  ul {
+    transition: .4s;
+    color: rgb(158, 173, 193);
+}
+.magic.dark h1, 
+.magic.dark h2, 
+.magic.dark h3, 
+.magic.dark h4, 
+.magic.dark h5, 
+.magic.dark h6{
+    transition: .4s;
+    color: rgb(70, 196, 250)
+}
+.magic.dark .bg-indigo-300 {
+    transition: .4s;
+    background-color: #1d2c4f;
+}
+
+.magic.dark svg path {
+    transition: .4s;
+    fill:rgb(70, 196, 250);
+}
+
+.magic.dark .external-link svg path {
+    stroke: rgb(70, 196, 250);
+    fill: transparent;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    position: absolute;
+    opacity: 0;
+}

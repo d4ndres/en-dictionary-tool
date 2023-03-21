@@ -10,8 +10,5 @@ export default {
 }
 </script>
 <style scoped>
-* {
-  min-height: 100vh;
- 
-}
+@import url('@/assets/master.css');
 </style>
