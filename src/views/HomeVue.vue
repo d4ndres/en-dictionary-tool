@@ -23,6 +23,13 @@
                             </Transition>
                         </button>
                     </div>
+                    <Transition>
+                        <article v-if="errorShow">
+                            <p>
+                                {{ inputSearch }} not found.
+                            </p>
+                        </article>
+                    </Transition>
                 </div>
                 <Transition>
                     <article v-if="firstMeaning">
@@ -71,6 +78,7 @@
                     </article>
                 </Transition>
 
+
             </main>
             
             <footer>
@@ -99,6 +107,7 @@
                 inputSearch: null,
                 stateSearch: null,
                 data: null,
+                errorShow: false,
                 audio: {
                     data: null,
                     disabled: null
@@ -110,6 +119,7 @@
                 if ( !this.inputSearch ) return 
                 this.data = null
                 this.stateSearch = true
+                this.errorShow = false
                 try{
                     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${this.inputSearch}`)
                     this.data = await response.json()
@@ -118,6 +128,7 @@
                 } catch( error ){
                     console.error(error);
                     this.stateSearch = false
+                    this.errorShow = true
                 }
             },
             async audioPlay(){
